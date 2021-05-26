@@ -21,16 +21,16 @@ function stop () {
         `)
 }
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("G")
+    radio.sendString("GO")
 })
 radio.onReceivedString(function (receivedString) {
-    if (receivedString == "G") {
+    if (receivedString == "GO") {
         goForward()
     } else {
         stop()
     }
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("S")
+    radio.sendString("STOP")
 })
 radio.setGroup(123)
